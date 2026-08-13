@@ -1,6 +1,6 @@
 // ========== কনফিগারেশন ==========
 // আপনার GitHub Raw লিংকটি এখানে বসান
-const GITHUB_RAW_URL = "https://raw.githubusercontent.com/ইউজারনেম/রিপোজিটরি-নাম/ব্রাঞ্চ-নাম/ফাইলের-পাথ/ফাইলনাম.m3u";
+const GITHUB_RAW_URL = "https://raw.githubusercontent.com/dhaka-livestream/Sunnext-mpd/refs/heads/main/Starjalshahd-UK.m3u";
 
 // প্লেলিস্টের ভেতরের লিংকের জন্য বেস URL (শেষে '/' দিতে হবে)
 const BASE_URL = "https://raw.githubusercontent.com/ইউজারনেম/রিপোজিটরি-নাম/ব্রাঞ্চ-নাম/ফাইলের-পাথ/";
