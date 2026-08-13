@@ -1,5 +1,3 @@
-// src/index.js
-
 // ========== কনফিগারেশন ==========
 const UPSTREAM_BASE = "https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/starjalsha_live_https/";
 const ROUTE_PREFIX = "/starjalshahd-uk/";
@@ -16,7 +14,7 @@ export default {
     const path = url.pathname;
     const workerOrigin = url.origin;
 
-    // ১. শুধু আপনার নির্দিষ্ট পাথ হ্যান্ডেল করুন
+    // রুট পাথে (/) গেলে 404 দেখাবে, "Hello world" নয়
     if (!path.startsWith(ROUTE_PREFIX)) {
       return new Response(`Not Found: ${path}`, { status: 404 });
     }
@@ -34,18 +32,14 @@ export default {
         );
       }
 
-      // ২. M3U8 ফাইল প্রসেস করুন
       if (relativePath === "index.m3u8" || relativePath.endsWith(".m3u8")) {
         let text = await response.text();
-
-        // ৩. আপেক্ষিক পাথগুলোকে পূর্ণ URL-এ রূপান্তর
         const baseUrl = UPSTREAM_BASE.replace(/\/[^/]*$/, '/');
         const rewritten = text
           .split("\n")
           .map((line) => {
             line = line.trim();
             if (!line || line.startsWith("#")) {
-              // URI="..." থাকলে সেটাও আপডেট করুন
               if (line.includes('URI="') && !line.includes('URI="http')) {
                 return line.replace(/URI="([^"]*)"/g, (match, p1) => {
                   const fullUrl = new URL(p1, baseUrl).href;
@@ -73,7 +67,6 @@ export default {
         });
       }
 
-      // ৪. অন্যান্য ফাইল (যেমন .ts) সরাসরি পাস
       const newHeaders = new Headers(response.headers);
       newHeaders.set("Access-Control-Allow-Origin", "*");
       newHeaders.set("Cache-Control", "no-cache");
