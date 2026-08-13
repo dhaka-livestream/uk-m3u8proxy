@@ -1,6 +1,6 @@
 // ========== কনফিগারেশন ==========
 // ১. আপনার GitHub Raw লিংকটি এখানে বসান (শেষে '/' ছাড়া)
-const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/আপনার-ইউজারনেম/রিপোজিটরি-নাম/ব্রাঞ্চ-নাম";
+const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/dhaka-livestream/Sunnext-mpd/refs/heads/main/Starjalshahd-UK.m3u";
 
 // ২. আপনি যে পাথটি ব্যবহার করতে চান (যেমন: /starjalshahd-uk/)
 const ROUTE_PREFIX = "/starjalshahd-uk/";
