@@ -1,6 +1,6 @@
 // ========== কনফিগারেশন (শুধু এখানে পরিবর্তন করুন) ==========
 // আপনার GitHub Raw লিংক (যে .m3u ফাইলটি কাজ করে)
-const GITHUB_RAW_URL = "https://raw.githubusercontent.com/ইউজারনেম/রিপোজিটরি-নাম/ব্রাঞ্চ-নাম/ফাইলের-পাথ/ফাইলনাম.m3u";
+const GITHUB_RAW_URL = "https://raw.githubusercontent.com/dhaka-livestream/Sunnext-mpd/refs/heads/main/Starjalshahd-UK.m3u";
 
 // আপনি যে পাথটি ব্যবহার করতে চান (স্ল্যাশ দিয়ে শুরু ও শেষ)
 const ROUTE_PREFIX = "/starjalshahd-uk/";
